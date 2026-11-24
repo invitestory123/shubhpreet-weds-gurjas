@@ -16,7 +16,7 @@ export const RsvpSection: React.FC = () => {
 
     const text = `Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh! Warm congratulations to Gurjas & Shubhpreet on their Roka Ceremony! RSVP${namePart}: ${statusText} (12th December 2026)`;
 
-    const phone = "919706047369";
+    const phone = "918077828992";
     const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -96,7 +96,7 @@ export const RsvpSection: React.FC = () => {
               </button>
             </div>
 
-            {/* Single WhatsApp RSVP Button (Gurjas) */}
+            {/* Single WhatsApp RSVP Button (Shubhpreet) */}
             <div className="mt-4 flex justify-center">
               <button
                 type="button"
@@ -104,19 +104,8 @@ export const RsvpSection: React.FC = () => {
                 className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-[#25D366]/40 bg-gradient-to-r from-[#128C7E] to-[#25D366] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-[0_8px_22px_rgba(37,211,102,0.28)] transition-all hover:scale-[1.03] active:scale-[0.98]"
               >
                 <MessageCircle size={17} className="fill-white text-transparent shrink-0" />
-                <span>RSVP to Gurjas</span>
+                <span>RSVP to Shubhpreet</span>
               </button>
-            </div>
-
-            {/* RSVP Contact Names: Bride name only, no phone number shown */}
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-serif text-xs text-[#665241]">
-              <span className="font-display text-[10px] uppercase tracking-[0.2em] text-[#8f7457]">
-                RSVP:
-              </span>
-              <span className="font-semibold text-[#3d121e]">Gurjas</span>
-              <span className="text-[#8f7457]">(+91 9706047369)</span>
-              <span className="text-[#d4af37]">&bull;</span>
-              <span className="font-semibold text-[#3d121e]">Shubhpreet</span>
             </div>
           </div>
 
