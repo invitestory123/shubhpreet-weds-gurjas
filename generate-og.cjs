@@ -104,6 +104,7 @@ async function createOgImage() {
     .png({
       compressionLevel: 9,
       adaptiveFiltering: true,
+      effort: 10,
     })
     .toFile(path.join(__dirname, 'public', 'og-image.png'));
 

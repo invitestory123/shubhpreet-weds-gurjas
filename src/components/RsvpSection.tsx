@@ -107,6 +107,17 @@ export const RsvpSection: React.FC = () => {
                 <span>RSVP to Gurjas</span>
               </button>
             </div>
+
+            {/* RSVP Contact Names: Bride name only, no phone number shown */}
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-serif text-xs text-[#665241]">
+              <span className="font-display text-[10px] uppercase tracking-[0.2em] text-[#8f7457]">
+                RSVP:
+              </span>
+              <span className="font-semibold text-[#3d121e]">Gurjas</span>
+              <span className="text-[#8f7457]">(+91 9706047369)</span>
+              <span className="text-[#d4af37]">&bull;</span>
+              <span className="font-semibold text-[#3d121e]">Shubhpreet</span>
+            </div>
           </div>
 
           <p className="mt-4 font-display text-[10px] uppercase tracking-[0.22em] text-[#9c8774]">

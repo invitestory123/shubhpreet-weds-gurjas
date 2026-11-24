@@ -44,8 +44,8 @@ export const weddingData = {
     },
     bride: {
       name: "Shubhpreet",
-      phone: "+91 8077828992",
-      waNumber: "918077828992",
+      phone: "",
+      waNumber: "",
     },
   },
   program: [
