@@ -99,16 +99,34 @@ async function createOgImage() {
     </svg>
   `);
 
-  // Output lossless compressed PNG
+  // Output true lossless compressed PNG (24-bit sRGB, no lossy palette quantization)
   await sharp(svgOverlay)
     .png({
       compressionLevel: 9,
       adaptiveFiltering: true,
-      effort: 10,
+      palette: false,
     })
     .toFile(path.join(__dirname, 'public', 'og-image.png'));
 
-  console.log('Successfully generated public/og-image.png for Roka Ceremony without couple photo');
+  // Also copy to root directory for direct root crawlers
+  await sharp(svgOverlay)
+    .png({
+      compressionLevel: 9,
+      adaptiveFiltering: true,
+      palette: false,
+    })
+    .toFile(path.join(__dirname, 'og-image.png'));
+
+  // Output high quality JPEG version (ideal for WhatsApp < 100KB)
+  await sharp(svgOverlay)
+    .jpeg({
+      quality: 94,
+      mozjpeg: true,
+      chromaSubsampling: '4:4:4',
+    })
+    .toFile(path.join(__dirname, 'public', 'og-image.jpg'));
+
+  console.log('Successfully generated public/og-image.png (lossless), og-image.png (root), and public/og-image.jpg');
 }
 
 createOgImage().catch(console.error);
